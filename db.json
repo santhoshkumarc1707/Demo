@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Watch"
+    },
+    {
+      "id": 2,
+      "title": "Hi "
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "body": "Nice post!"
+    }
+  ]
+}

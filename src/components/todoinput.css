@@ -1,0 +1,35 @@
+.formdiv {
+    border: 2px solid black;
+    width: 350px;
+    height: auto;
+    padding: 15px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 6%;
+}
+
+.smtbtn {
+    padding: 10px 75px;
+    background-color: rgb(48, 143, 39);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.smtbtn:active {
+    background-color: brown;
+}
+
+input {
+    border: 1px solid black;
+    width: 100%;
+    height: 25px;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+input:hover {
+    border: 2px solid green;
+}

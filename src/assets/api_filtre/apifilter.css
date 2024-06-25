@@ -1,0 +1,25 @@
+.image_container {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 2fr));
+}
+
+.div_container {
+    border: 1px sloid white;
+    margin: 10px;
+    padding: 10px 5px;
+    box-shadow: 5px 5px whitesmoke;
+    cursor: pointer;
+}
+
+.div_container:hover {
+    box-shadow: 2px 2px whitesmoke;
+
+}
+
+.title_tag {
+    color: black;
+    text-align: justify;
+    align-items: center;
+}

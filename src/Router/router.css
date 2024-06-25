@@ -1,0 +1,23 @@
+.router_cointainer .navbar {
+    background-color: #f1f5f9;
+    width: 20%;
+    height: 100vh;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 700;
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+}
+
+.router_cointainer .navbar.active {
+    transform: translateX(0%);
+    transition: all .3s ease-in-out;
+
+}
+
+.page_container {
+    display: flex;
+
+
+}
