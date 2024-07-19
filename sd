@@ -1,0 +1,56 @@
+import { useEffect, useRef, useState } from 'react'
+import { createSearchParams, useNavigate, useSearchParams } from 'react-router-dom'
+import Container from '../components/container/container';
+import Head from '../components/head/head';
+const NewPermitWork = () => {
+    const pageRef = useRef(null);
+    const [searchParams] = useSearchParams();
+    const params = parseInt(searchParams.get('tab') ?? 1);
+    const navigate = useNavigate();
+    const [activeTab, setActiveTab] = useState(params);
+    useEffect(() => {
+        if (pageRef.current) {
+            pageRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+    const tab = useRef({
+        1: 'newptw01',
+        2: 'newptw02'
+    })
+    useEffect(() => {
+        navigate({
+            pathname: '/new-permit',
+            search: `?${createSearchParams({ tab: activeTab })}`
+
+        })
+    }, [activeTab, navigate])
+    const tabOnClick = (tab) => {
+        setActiveTab(tab)
+    };
+    return (
+        <div ref={pageRef}>
+            <Head content='NEW PERMIT-TO-WORK (PTW)' />
+            <Container >
+                <div>
+                    <ul>
+                        {Object.keys(tab.current).map((key, idx) => (
+                            <li key={idx} onClick={() => tabOnClick(parseInt(key))}>
+                                {tab.current[key]}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                {activeTab === '1' && <>hello</>}
+                {activeTab === '2' && <>hello 2</>}
+
+            </Container>
+
+        </div>
+    )
+}
+
+export default NewPermitWork
+
+
+
